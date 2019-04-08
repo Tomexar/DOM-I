@@ -42,12 +42,30 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 // document.querySelector('.jumbotron li').innerHTML = " Dog GIF"
 
-const Servicesa = document.querySelector('a:nth-child(1)').innerHTML = 'Services'
-const Producta = document.querySelector('a:nth-child(2)').innerHTML = 'Product'
-const Visiona = document.querySelector('a:nth-child(3)').innerHTML = 'Vision'
-const Featuresa = document.querySelector('a:nth-child(4)').innerHTML = 'Features'
-const Abouta = document.querySelector('a:nth-child(5)').innerHTML = 'About'
-const Contacta = document.querySelector('a:nth-child(6)').innerHTML = 'Contact'
+let navA = document.querySelectorAll('header nav a');
+for (let i = 0; i < 6; i++){
+  var n = i +1;
+  navA[i].textContent = siteContent['nav']['nav-item-'+ n]
+  navA[i].style.color = 'green'
+};
+
+
+
+// const Servicesa = document.querySelector('a:nth-child(1)').innerHTML = 'Services'
+
+// document.querySelector('a:nth-child(1)').style.color = "green";
+
+// const Producta = document.querySelector('a:nth-child(2)').innerHTML = 'Product'
+// const Visiona = document.querySelector('a:nth-child(3)').innerHTML = 'Vision'
+// const Featuresa = document.querySelector('a:nth-child(4)').innerHTML = 'Features'
+// const Abouta = document.querySelector('a:nth-child(5)').innerHTML = 'About'
+// const Contacta = document.querySelector('a:nth-child(6)').innerHTML = 'Contact';
+
+// document.querySelector('a:nth-child(2)').style.color = "green";
+// document.querySelector('a:nth-child(3)').style.color = "green";
+// document.querySelector('a:nth-child(4)').style.color = "green";
+// document.querySelector('a:nth-child(5)').style.color = "green";
+// document.querySelector('a:nth-child(6)').style.color = "green";
 
  
 document.getElementById("cta-img").src="img/header-img.png"
@@ -94,3 +112,24 @@ const footer = document.querySelector('footer').innerHTML = "Copyright Great Ide
 //const Caddress = document.querySelector('.contact p:first-child').innerHTML = '123 Way 456 Street Somewhere, USA' 
 //const Cemail = document.querySelector('.contact p').lastChild.innerHTML = 'sales@greatidea.io'
 //const Caddress = document.querySelector(".contact p")[1].innerHTML = '123 Way 456 Street Somewhere, USA';
+
+
+const newLinks = ['This' , 'Is' , 'Hard'];
+
+const N1 = document.querySelector('nav');
+
+newLinks.forEach(current => {
+  const linkitem = document.createElement('a');
+  linkitem.textContent = current;
+  N1.append(linkitem);
+  linkitem.style.color = 'green'
+})
+
+// for (i = 1; i<10; i++){
+//   document.querySelector('a').style.color = "green";
+// }
+
+// let currenta = document.querySelector('a');
+//   currenta.forEach(current => {
+//     currenta.style.color = 'green';
+//   })
